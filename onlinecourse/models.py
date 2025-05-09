@@ -112,7 +112,7 @@ class Question(models.Model):
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     content = models.CharField(max_length=200)
-    is_true = models.BooleanField(default=False)
+    is_correct = models.BooleanField(default=False)
 
 
 class Submission(models.Model):
